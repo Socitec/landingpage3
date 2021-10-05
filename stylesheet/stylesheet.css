@@ -1,0 +1,815 @@
+/* 共通スタイル */
+
+html, body,
+ul, ol, li,
+h1, h2, h3, h4, h5, h6, p, div {
+  margin: 0;
+  padding: 0;
+  font-family: "Hiragino Sans",sans-serif;
+}
+
+li {
+  list-style: none;
+  text-align: center;
+
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  position: relative;
+  min-height: 100vh;
+  padding-bottom: 50px;
+}
+
+.container {
+  max-width: 1200px;
+  width: 80%;
+  padding: 0 15px;
+  margin: 0 auto;
+}
+
+/* クリアタグfloat解除 */
+.clear {
+  clear: left;
+}
+
+
+/* 背景z-index固定 */
+.background {
+  z-index: -10;
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  top: 0px;
+  background-image: url(../image/background_1.jpg);
+  background-size: cover;
+}
+
+/* 見出し */
+.index {
+  margin: 40px auto 20px auto;
+  text-align: center;
+}
+
+.index h2 {
+  padding: 10px;
+  margin-top: 20px;
+  font-size: 30px;
+  font-weight: bold;
+  display: inline-block;
+  background-color: #305089;
+  box-shadow: 5px 5px #aeb5dc;
+  color: #ffffff;
+}
+
+h3 {
+  font-weight: bold;
+  line-height: 30px;
+  font-size: 25px;
+  text-align: center;
+  margin: 10px;
+}
+
+h4 {
+  text-decoration: underline;
+  font-size: 20px;
+  padding: 5px;
+  margin-top: 5px;
+  line-height: 25px;
+}
+
+h5 {
+  padding: 5px;
+  margin-top: 5px;
+}
+
+/* ボックス*/
+.item {
+  text-align: center;
+  width: 40%;
+  background-color: rgba(234, 246, 253, 0.8);
+  border-width: 2px;
+  border-color: #3b82c4;
+  border-radius: 10px;
+  padding: 15px;
+}
+
+/* ボタン */
+#topview .limitedtime button, #contact button {
+  margin-top: 16px;
+  padding: 15px;
+  border-radius: 5px;
+  background-color: rgb(0, 172, 0);
+  color: white;
+  font-weight: bold;
+  font-size: 20px;
+  border-radius: 20px;
+  box-shadow: 0px 10px rgb(147, 255, 147);
+  letter-spacing: 4px;
+}
+
+.buttonarea {
+  text-align: center;
+}
+
+/* ボバーしたときに背景色と文字色変更 */
+header .hoverChangeColor:hover {
+  background: linear-gradient(#ddd 0%, #fff 100%);
+  color: #000;
+}
+
+header .hoverChangeColor {
+  transition: all 0.5s;
+}
+
+/* ヘッダー */
+header {
+  position: fixed;
+  top: 0;
+  z-index: 1;
+  height: 65px;
+  width: 100%;
+  background-color: rgba(34, 49, 52, 0.9);
+}
+
+header .container {
+  width: 100%;
+}
+
+header .logo {
+  float: left;
+}
+
+header .logo img {
+  height: 65px;
+}
+
+/* スクロール時メニュー消す・出現させる */
+.hide{
+	transform: translateY(-100%); /* 上に消えるようにする */
+}
+
+#scrollArea{
+  transition: .5s; /* スクロール時に一瞬で消えると物足りないので.hideの処理を0.5秒で行う */
+}
+
+.nav-list{
+  /* navの横並び */
+  display: flex;
+}
+
+.headermenu {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  float: right;
+}
+
+.headermenu ul{
+  text-align: right;
+  line-height: 65px;
+}
+
+.headermenu li{
+  display: inline-block;
+  padding: 0 20px;
+  color: white;
+}
+
+/* ハンバーガーメニュー初期非表示 */
+.burger-btn {
+  display: none;
+}
+
+/*トップ移動ボタン */
+.topButton {
+  display: inline-block;
+  position: fixed;
+  right: 5%;
+  bottom: 40px;
+  background-color: rgba(0, 0, 0, 0.3);
+  border-radius: 5px;
+  padding: 10px;
+}
+
+.topButton p {
+  color: #fff;
+  text-align: center;
+}
+
+/* トップ画面 */
+
+#topview  {
+  margin-top:65px
+}
+
+#topview .top {
+  padding-top: 30px;
+  text-align: center;
+}
+
+#topview .container {
+  background-image: url(../image/topview_for_pc.jpg);
+  background-size: cover;
+}
+
+#topview .title {
+  padding: 80px 0 50px 0;
+}
+
+#topview h1 {
+  font-size: 30px;
+  padding:10px;
+  display: inline-block;
+  background-color: #fcc9ac;
+  color: #4a387c;
+  box-shadow: 7px 7px #d7cebb ;
+  letter-spacing: 4px;
+  line-height: 50px;
+}
+
+#topview .socitec {
+  padding-top: 40px;
+}
+
+#topview .subtitle {
+  padding-top: 50px;
+  text-align: center;
+}
+
+#topview .subtitle p {
+  display: inline-block;
+  color: #ab0f50;
+  font-size: 30px;
+  letter-spacing: 10px;
+  font-weight: bold;
+  font-family: 'Caveat', cursive;
+  font-family: 'Courgette', cursive;
+  font-family: 'Dancing Script', cursive;
+}
+
+#topview .socitec span {
+  background: linear-gradient(transparent 70%, #f9e900 70%);
+  font-size: 20px;
+
+}
+
+
+#topview .toptext {
+  margin-top: 40px;
+  text-align: center;
+}
+
+
+
+#topview .limitedtime {
+  text-align: center;
+  margin-top: 70px;
+}
+
+#topview .limitedtime p {
+  padding: 15px;
+  background-color: rgba(255, 255, 255, 0.8);
+  text-align: center;
+  display: inline-block;
+  line-height: 32px;
+  border-radius: 10px;
+  letter-spacing: 1px;
+}
+
+#topview .limitedtime span.limitedtimeRemark {
+  font-weight: bold;
+  font-size: 25px;
+  color: ;
+  letter-spacing: 3px;
+  background: linear-gradient(transparent 70%, #fcc9ac 70%);
+
+}
+
+
+
+#topview button span {
+  font-size: 25px;
+
+}
+
+
+/* 悩み */
+#problem .issue {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+}
+
+#problem  .thinking {
+  width: 30%;
+}
+
+#problem .thinking img {
+  width: 100%;
+}
+
+#problem .problems {
+  width: 60%;
+}
+
+#problem .problems div {
+  background-color: rgba(219, 237, 240, 0.7);
+  margin: 10px;
+  padding:10px;
+  border-width: 2px;
+  border-color: #1760a0;
+  border-radius: 5px;
+}
+
+#problem .problems p {
+  line-height: 27px;
+}
+
+/* 問題解決 */
+
+#solution .solutionview {
+  text-align: center;
+}
+
+
+#solution .solutionview img {
+  width: 50%;
+  margin: 0 auto;
+}
+
+#solution .solutions {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  margin-top: 20px;
+}
+
+#solution .solutions h3 {
+  color: red;
+  font-size: 24px;
+
+}
+
+#solution .solutions .item {
+  width: 30%;
+  padding: 15px;
+  background-color: rgba(255, 250, 1940, 0.7);
+  border-radius: 10px;
+  line-height: 25px;
+
+}
+
+#solution .item span {
+  background: linear-gradient(transparent 70%, #f9e900 70%);
+
+}
+
+
+/* プロフィール */
+#profile .profileBox {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+}
+
+#profile .profileImage {
+  text-align: center;
+  width: 35%;
+}
+
+#profile .profileImage img {
+  width: 100%;
+  border-radius: 50%;
+}
+
+#profile .profileitems {
+  width: 60%;
+}
+
+
+#profile .hobby {
+  text-align: center;
+  margin-top: 20px;
+}
+
+#profile .hobby li {
+  line-height: 30px;
+  padding: 5px;
+}
+
+
+
+#profile .history {
+  text-align: center;
+  margin-top: 20px;
+}
+
+#profilephoto {
+  width: 30%;
+
+}
+
+#profile table {
+  margin: 0 auto;
+  word-wrap: break-word;
+  vertical-align: middle;
+}
+
+#profile .history table, #profile .history th, #profile .history td {
+  border-width: 2px;
+  border-style: solid;
+  border-color: rgb(128, 128, 128);
+}
+
+
+#profile table td {
+  line-height: 35px;
+  padding: 5px 10px;
+}
+
+#profile .history .school {
+  width: 15%;
+}
+
+#profile .history .place {
+  width: 10%;
+}
+
+#profile .history .memory {
+  width: 75%;
+  text-align: left;
+}
+
+
+/* サービス */
+#service .skillsbox {
+  margin-top: 30px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+}
+
+
+
+#service .skillsbox h3 {
+}
+
+#service .skillsbox img {
+  width: 60%;
+}
+
+/* 実績 */
+#works .websitebox, #works .blogbox {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+
+}
+
+#works img {
+  width: 100%
+}
+
+#works .website, #works .blog {
+  text-align: center;
+}
+
+#works h3 {
+  font-weight: bold;
+  display: inline-block;
+  margin: 20px auto;
+  background: linear-gradient(transparent 70%, #f9e900 70%);
+
+}
+
+#works .worksbox .item  {
+  text-align: center;
+  width: 30%;
+  background-color: rgba(234, 246, 253, 0.8);
+  padding: 10px;
+  border-radius: 5px;
+
+
+}
+
+#works h5 {
+  font-weight: bold;
+  color: red;
+  font-size: 18px;
+  line-height: 23px;
+
+}
+
+
+/* 依頼の流れ */
+
+#order .container {
+  text-align: center;
+}
+
+#order .orderbox {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+
+}
+
+#order .content {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-around;
+  width: 25%;
+  margin-bottom: 20px;
+}
+
+#order .content .item {
+  width: 80%;
+}
+
+
+
+#order .content p {
+  margin-top: 10px;
+}
+
+#order .content .fa-caret-right{
+  color: rgb(128, 128, 128);
+}
+
+#order .inquiry .firsticon {
+  opacity: 0;
+}
+
+
+
+/* お問い合わせ */
+
+
+
+#contact .contactBox{
+  width: 100%;
+  margin: 0 auto;
+}
+
+#contact .contactBox .contactTitle{
+  font-size:20px;
+  text-align: center;
+  color: #625E5E;
+  font-weight:bold;
+  margin: 0 auto;
+  text-decoration-line: underline;
+  padding:150px 0 50px 0;
+}
+
+#contact .contactBox .c_leftBox{
+  width: 440px;
+  float: left;
+}
+#contact .contactBox .c_leftBox .c_leftBox01{
+  font-size: 20px;
+  line-height: 30px;
+  text-align: left;
+}
+#contact .contactBox .c_leftBox .c_leftBox02{
+  font-size:14px;
+  line-height: 20px;
+  text-align: left;
+  margin-top: 20px;
+
+}
+
+
+#contact .contactBox .c_rightBox{
+  width: 440px;
+  float: right;
+}
+
+
+#contact .c_rightBox div {
+  font-size: 20px;
+  margin-bottom: 20px;
+
+
+}
+
+#contact .c_rightBox p {
+  line-height: 25px;
+}
+
+#contact .inputArea {
+  width: 90%;
+  border-radius: 5px;
+  background-color: white;
+  border: 1px solid rgb(145, 145, 145);
+}
+
+#contact input {
+  height: 20px;
+}
+
+#contact .c_rightBox button {
+}
+
+#contact .error {
+  font-size: 15px;
+}
+
+
+
+
+
+#contact .container {
+  width: 50%;
+}
+
+#contact form {
+  margin: 0 auto;
+}
+
+
+
+#contact .form-group {
+  line-height: 30px;
+  margin: 20px auto;
+}
+
+#contact .inputarea {
+  background-color: white;
+  border-radius: 5px;
+  width: 100%;
+  padding: 10px;
+  border-width: 1px;
+  border-style: solid;
+  border-color: rgb(47, 47, 47);
+}
+
+#contact .form-group input {
+  height: 40px;
+}
+
+#contact label {
+  line-height: 25px;
+  margin-top: 20px;
+}
+
+#contact .buttonarea {
+  text-align: center;
+  padding-bottom: 20px;
+}
+
+#contact .submit {
+  margin: 20px auto;
+  text-align: center;
+}
+
+.btn {
+  text-align: center;
+  margin: 10px auto 20px;
+  display: inline-block;
+  padding: 15px;
+  border-radius: 5px;
+  background-color: rgb(0, 172, 0);
+  color: white;
+  font-weight: bold;
+  font-size: 20px;
+  border-radius: 20px;
+  box-shadow: 0px 10px rgb(147, 255, 147);
+}
+
+/* コンタクトフォーム外部 */
+/* input 要素 */
+#name, #email, #subject, #email_check, #tel {
+  max-width:400px;
+}
+#body {
+  max-width: 640px;
+}
+/* エラー表示 */
+p.error, span.error {
+  color: red;
+}
+/* フォーム要素（Bootstrap4 のスタイルを上書き） */
+.form-control {
+  border-radius: 0px;
+  background-color: #fdfdfd;
+  font-size: 14px;
+}
+.form-control:focus {
+  border-color: #aadbe8;
+  outline: 0;
+  -webkit-box-shadow: inset 0 0px 1px rgba(0, 0, 0, 0.075), 0 0 8px rgba(102, 175, 233, 0.4);
+  box-shadow: inset 0 0px 1px rgba(0, 0, 0, 0.075), 0 0 8px rgba(102, 175, 233, 0.4);
+  background-color:#fff;
+}
+/* Google Chrome, Safari, Opera 15+, Android, iOS */
+::-webkit-input-placeholder {
+  font-size: 13px;
+}
+/* Firefox 18- */
+:-moz-placeholder {
+  font-size: 13px;
+}
+/* Firefox 19+ */
+::-moz-placeholder {
+  font-size: 13px;
+}
+/* IE 10+ */
+:-ms-input-placeholder {
+  font-size: 13px;
+}
+::placeholder{
+  font-size: 13px;
+}
+textarea.form-control {
+  height: 200px;
+}
+/* 確認ページの表 */
+.confirm_table {
+  margin: 30px 0;
+}
+.confirm_table table caption{
+  caption-side: top;
+}
+.confirm {
+  float: left;
+  margin-right: 20px;
+}
+
+
+/* Footer */
+footer {
+  background-color: rgba(244, 244, 244, 0.8);
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+}
+
+footer .container {
+  display: flex;
+  justify-content: flex-start;
+  height: 40px;
+}
+
+footer .copyright {
+  display: inline-block;
+  line-height: 40px;
+  padding-left: 20px;
+  width: 100%;
+}
+
+
+/* 確認画面 */
+#confirm {
+  margin: 65px auto 0;
+  width: 80%;
+}
+
+#confirm .confirmText {
+  text-align: center;
+  margin: 30px auto;
+}
+
+#confirm .confirmText p {
+  line-height: 1.5;
+}
+
+#confirm table th, #confirm table td {
+  padding: 10px;
+  font-weight: normal;
+}
+
+#confirm .btn-secondary {
+  background-color: rgb(1, 183, 243);
+  box-shadow: 0px 10px rgb(152, 228, 254);
+  width: auto;
+
+}
+
+#confirm .buttonBox {
+  text-align: center;
+  padding-top: 10px;
+}
+
+#confirm .buttonarea {
+  display: inline-block;
+}
+
+/* 完了ページ */
+#complete p {
+  line-height: 1.5;
+  text-align: center;
+}
+
+#complete {
+  padding: 20px;
+}
+
+#complete h3 {
+  line-height: 40px;
+}

@@ -1,0 +1,277 @@
+/* タブレット向けレイアウト */
+@media all and (max-width: 1000px ) {
+  .container {
+    width: 100%;
+    padding: 0;
+  }
+
+}
+
+
+
+/* モバイル向けレイアウト */
+@media all and (max-width: 670px) {
+  .container {
+    margin: 0;
+
+  }
+
+  /* 共通スタイル*/
+  .index h2 {
+    width: 90%;
+    font-size: 25px;
+  }
+
+  /* ハンバーガーメニュー */
+  .burger-btn{
+    display: block;
+    width: 60px;
+    height: 60px;
+    position: relative;
+    z-index: 10;
+    border:none;
+    float: right;
+  }
+
+  .bar{
+    width: 30px;
+    height: 1px;
+    display: block;
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: #fff;
+  }
+
+  .bar_top{
+    top: 20px;
+  }
+  .bar_mid{
+    top: 50%;
+    transform: translate(-50%,-50%);
+  }
+  .bar_bottom{
+    bottom: 20px;
+  }
+
+  .burger-btn.close .bar_top{
+    transform: translate(-50%,10px) rotate(45deg);
+    transition: transform .3s;
+  }
+  .burger-btn.close .bar_mid{
+    opacity: 0;
+    transition: opacity .3s;
+  }
+  .burger-btn.close .bar_bottom{
+    transform: translate(-50%,-8px) rotate(-45deg);
+    transition: transform .3s;
+  }
+
+  /* ハンバーガーメニュー内スタイル */
+  .nav-wrapper{
+    transform: translateX(100%);
+    transition: .3s;
+    width: 100vw;
+    height: 100vh;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 5;
+  }
+
+  .header-nav{
+    width: 100%;
+    height: 100%;
+    background-color:#1B1310;
+    z-index: 5;
+  }
+
+  .header-nav .nav-list{
+    display: block;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    text-align: center;
+  }
+  .header-nav .nav-item{
+    margin-right: 0;
+    margin-bottom: 40px;
+    display: block;
+  }
+
+  /* burger-btnがクリックされ、jQueryでcloseクラスが追加された時のアクション */
+  .burger-btn .close .bar_top{
+    transform: translate(-50%,10px) rotate(45deg);
+    transition: transform .3s;
+  }
+
+  .burger-btn .close .bar_mid{
+    opacity: 0;
+    transition: opacity .3s;
+  }
+
+  .burger-btn .close .bar_bottom{
+    transform: translate(-50%,-8px) rotate(-45deg);
+    transition: transform .3s;
+  }
+
+  /* ハンバーガーボタンが押され、slide-in classが追加されたときのアクション */
+  .slide-in{
+    transform: translateX(0);
+    transition: .3s;
+  }
+
+  /* ハンバーガーメニューが開いたときにスクロール固定 */
+  body.noscroll{
+    overflow: hidden;
+  }
+
+  /*トップビュー*/
+  #topview .socitec {
+    padding-top: 20px;
+  }
+
+  #topview .top {
+    padding: auto 10%;
+  }
+
+  #topview h1 {
+    width: 90%;
+  }
+
+  #topview .container {
+    background-image: url(../image/topview_for_sp.jpg);
+  }
+
+  #topview .socitec {
+    padding-top: 30px;
+  }
+
+  #topview .subtitle {
+    margin-top: 30px;
+  }
+
+  #topview .limitedtime button {
+    width: 80%;
+  }
+
+  /* 悩み */
+
+  #problem .issue {
+    flex-direction: column-reverse;
+    justify-content: center;
+    text-align: center;
+  }
+
+  #problem  .thinking {
+    width: 90%;
+    margin: 0 auto;
+  }
+
+  #problem .thinking img {
+    height: 70vw;
+    object-fit: cover;
+  }
+
+  #problem .problems {
+    width: 90%;
+    margin: 0 auto;
+  }
+
+  /* 問題解決 */
+  #solution .solutionview img {
+    width: 90%;
+  }
+
+  #solution .solutions {
+    flex-direction: column;
+
+  }
+
+  #solution .solutions .item {
+    width: 90%;
+    display: inline-block;
+    margin: 5px auto;
+  }
+
+  /* プロフィール */
+  #profile .profileBox {
+    flex-direction: column;
+
+  }
+
+  #profile .profileImage {
+    width: 50%;
+  }
+
+  #profile .profileitems {
+    width: 90%;
+  }
+
+  #profile table td {
+    padding: 5px 3px;
+  }
+
+  #profile .history .school {
+    width: 20%;
+  }
+
+  #profile .history .place {
+    width: 15%;
+  }
+
+  #profile .history .memory {
+    width: 65%;
+  }
+
+  /* サービス */
+  #service .skillsbox {
+    flex-direction: column;
+  }
+
+  #service .skillsbox img {
+    width: 80%;
+  }
+
+  #service .skillsbox .item {
+    width: 90%;
+    margin: 5px auto;
+  }
+
+  /* 実績 */
+  #works .websitebox, #works .blogbox {
+    flex-direction: column;
+  }
+
+  #works .worksbox .item  {
+    width: 90%;
+    margin: 5px auto;
+  }
+
+  /* 依頼の流れ */
+  #order .fa-caret-right {
+    font-size: 1.5em;
+  }
+
+  #order .content .item {
+    width: 100%;
+    padding: 10px 2px;
+  }
+
+  #order .item i {
+    font-size: 2em;
+  }
+
+  #order .content p {
+    font-size: 15px;
+  }
+
+  /* お問い合わせ */
+  #contact .container {
+    width: 90%;
+    margin: 0 auto;
+  }
+
+
+}
