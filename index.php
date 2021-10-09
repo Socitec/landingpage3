@@ -8,7 +8,11 @@
   <meta charset="utf-8">
   <title>Portfolio</title>
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <!-- Viewport読み込み -->
+  <meta name="keywords" content="socitec, WEB制作, ブログ, ECサイト, エンジニア, ホームページ " />
+  <meta name="description" content="WEB制作を中心にエンジニアとして活動しています。WEBページ作りたい、ECサイトに出店したい、ブログを立ち上げたい、とお考えの個人事業主の方、是非お問い合わせください。" />
+
+  <link rel="icon" href="image/favicon.JPG">
+　<!-- Viewport読み込み -->
   <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, user-scalable=yes">
   <!-- サムネイル読み込み -->
   <meta name="thumbnail" content="image/preview.jpg" />
