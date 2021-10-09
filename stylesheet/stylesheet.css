@@ -125,6 +125,20 @@ header .hoverChangeColor {
   transition: all 0.5s;
 }
 
+
+/* スクロールしたときに要素がフェードイン */
+/*div.effect {
+   transition: ease .5s;
+ opacity: 0;
+ transform: translateX(-50px);
+}*/
+
+/* div.fadein {
+  opacity: 1;
+  transform: translateX(0px);
+}*/
+
+
 /* ヘッダー */
 header {
   position: fixed;
@@ -188,6 +202,7 @@ header .logo img {
 .topButton {
   display: inline-block;
   position: fixed;
+  z-index: 10;
   right: 5%;
   bottom: 40px;
   background-color: rgba(0, 0, 0, 0.3);
